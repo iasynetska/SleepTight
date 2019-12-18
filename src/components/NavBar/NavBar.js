@@ -22,12 +22,12 @@ class NavBar extends React.Component {
                         <div className="navbar">
                             <h1><Link to="/">Sleep Tight</Link></h1>
                             <ul>
-                                <li><Link to="/products">Products</Link></li>
+                                <li><Link to="/products">PRODUCTS</Link></li>
                                 <li><Link to="/find-your-fit">FIND YOUR FIT</Link></li>
                                 <li><Link to="/about-us">ABOUT US</Link></li>
                                 <li><Link to="/contact">CONTACT</Link></li>
                             </ul>   
-                           <Link to="/basket">Koszyk</Link>
+                           <span className="basketIcon"><Link to="/basket">Koszyk</Link></span>
                        </div>
 
                         <Switch>

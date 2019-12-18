@@ -1,52 +1,149 @@
 body {
     margin:0;
     padding:0;
+    background: #06052F;
+    color: #E5E5FF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #E5E5FF;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 .navbar {
-    padding: 2em;
-    background-color: burlywood;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    font-size: 15px;
+}
+
+.navbar h1  {
+    text-align: end;
+}
+
+.navbar h1 a {
+    font-size: 1em;
+    color: #0281E3;
+    font-weight: 500;
+}
+
+.navbar ul, .basketIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-right: 2em;
+}
+
+.jumbotron {
+    padding: 1em;
+    font-size: 15px;
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.jumbotron h1 {
+    font-size: 5em;
+}
+
+.jumbotron p {
+    font-size: 1.2em;
+    width: 70%;
+}
+
+.jumbotron button {
+    background: transparent linear-gradient(90deg, #09B7BE 0%, #0281E3 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    color: #E5E5FF;
+    font-size: 1.15em;
+    padding: .8em 1.7em;
+    margin-top: 1em;
+    border-radius: .2em;
+    cursor: pointer;
+}
+
+.superpowers h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+.superpowersCards {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.superpowersCards div img {
+    margin-bottom: 3em;
+}
+
+.superpowersCards div {
+    text-align: center;
+    background: #071440;
+    padding: 3.5em 1.5em;
+}
+
+.superpowersCards div:first-child {
+    border-top-left-radius: 1.5em;
+    border-bottom-left-radius: 1.5em;
+}
+
+.superpowersCards div:last-child {
+    border-top-right-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+}
+
+.superpowersCards div p {
+    font-size: 1.3em;
+    width: 70%;
+    margin: auto;
 }
 
 .products {
     padding: 2em;
-    background-color: cadetblue;
+    border-bottom: 5px solid red;
 }
 
 .product {
-    background-color: rgb(87, 201, 134);
+    border-bottom: 5px solid red;
 }
 
 .superpowers {
     padding: 2em;
-    background-color: rgba(255, 228, 196, 0.589);
-}
-
-.superpowers svg {
-    transform: scale(8);
-}
-
-.jumbotron {
-    padding: 2em;
-    background-color: rgba(0, 255, 255, 0.541);
+    border-bottom: 5px solid red;
 }
 
 .checkAwareness {
-    background-color: rgba(255, 0, 0, 0.404);
+    border-bottom: 5px solid red;
     padding: 2em;
 }
 
 .customersTest {
-    background-color: darkseagreen;
+    border-bottom: 5px solid red;
     padding: 2em;
 }
 
 .contactForm {
     padding: 2em;
-    background-color: darkkhaki;
+    border-bottom: 5px solid red;
 }
 
 .footer {
     padding: 2em;
-    background-color: rgba(178, 34, 34, 0.377);
+}
+
+.products img {
+    width: 40%;
 }

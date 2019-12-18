@@ -11,8 +11,11 @@ class Product extends React.Component {
     render() {
         return (
                 <div className="product">
+                    <img alt="" src={this.props.imgUrl} />
                     <h2>{this.props.name}</h2>
-                    <span>{this.props.price}</span>
+                    <h4>{this.props.category}</h4>
+                    <span>OOOOO</span>
+                    <p className="price">from {this.props.price},00 PLN</p>
                 </div>
             )
     }

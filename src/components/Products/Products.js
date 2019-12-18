@@ -9,15 +9,22 @@ class Products extends React.Component {
     componentDidMount() {
         // const productsData = await axios.get('http://...');
         const productsData = [
-            { name: "Łóżko", price: 15 },
-            { name: "Coś jeszcze", price: 40 },
-            { name: "LALAL", price: 85 },
+            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
+            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
+            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
+            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
+            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
+            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
+            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" }
         ]
 
         this.setState({products: productsData.map((product, index) => {
             return <Product 
                 name={product.name}
                 price={product.price}
+                imgUrl={product.imgUrl}
+                review={product.review}
+                category={product.category}
                 key={index} 
             />
         })})
@@ -25,7 +32,18 @@ class Products extends React.Component {
 
     render () {
         return (
-            <div className="products">{this.state.products}</div>
+            <div className="productsDiv">
+                <h1>What are you looking for?</h1>
+                <ul>
+                    <li>spring</li>
+                    <li>foam</li>
+                    <li>medical</li>
+                    <li>children's</li>
+                    <li>toppers</li>
+                    <li>frames</li>
+                </ul>
+                <div className="products">{this.state.products}</div>
+            </div>
         )
     }
 }

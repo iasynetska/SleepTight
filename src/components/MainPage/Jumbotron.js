@@ -7,7 +7,7 @@ class Jumbotron extends React.Component {
                 <div>
                     <h1>Having trouble sleeping?</h1>
                     <p>A good, custom fitted mattress can be your solution. See for yourself</p>
-                    <button>Choose your product</button>
+                    <button>choose your product</button>
                 </div>
                 <div className="image">
                     Image

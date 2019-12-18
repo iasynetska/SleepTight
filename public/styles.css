@@ -1,0 +1,52 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+.navbar {
+    padding: 2em;
+    background-color: burlywood;
+}
+
+.products {
+    padding: 2em;
+    background-color: cadetblue;
+}
+
+.product {
+    background-color: rgb(87, 201, 134);
+}
+
+.superpowers {
+    padding: 2em;
+    background-color: rgba(255, 228, 196, 0.589);
+}
+
+.superpowers svg {
+    transform: scale(8);
+}
+
+.jumbotron {
+    padding: 2em;
+    background-color: rgba(0, 255, 255, 0.541);
+}
+
+.checkAwareness {
+    background-color: rgba(255, 0, 0, 0.404);
+    padding: 2em;
+}
+
+.customersTest {
+    background-color: darkseagreen;
+    padding: 2em;
+}
+
+.contactForm {
+    padding: 2em;
+    background-color: darkkhaki;
+}
+
+.footer {
+    padding: 2em;
+    background-color: rgba(178, 34, 34, 0.377);
+}

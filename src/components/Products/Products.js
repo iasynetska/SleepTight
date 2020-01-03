@@ -3,7 +3,6 @@ import Product from './Product';
 import axios from 'axios';
 
 class Products extends React.Component {
-
     state = { products: [] }
 
     componentDidMount() {
@@ -32,17 +31,17 @@ class Products extends React.Component {
 
     render () {
         return (
-            <div className="productsDiv">
-                <h1>What are you looking for?</h1>
-                <ul>
-                    <li>spring</li>
-                    <li>foam</li>
-                    <li>medical</li>
-                    <li>children's</li>
-                    <li>toppers</li>
-                    <li>frames</li>
-                </ul>
-                <div className="products">{this.state.products}</div>
+            <div className="products">
+                <div className="products-title">What are you looking for?</div>
+                <div className="products-filter">
+                    <button className="products-filter__btn">spring</button>
+                    <button className="products-filter__btn">foam</button>
+                    <button className="products-filter__btn">medical</button>
+                    <button className="products-filter__btn">children's</button>
+                    <button className="products-filter__btn">toppers</button>
+                    <button className="products-filter__btn">frames</button>
+                </div>
+                <div className="products-container">{this.state.products}</div>
             </div>
         )
     }

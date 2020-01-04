@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import Filter from './Filter';
 import axios from 'axios';
 
 class Products extends React.Component {
@@ -30,17 +31,19 @@ class Products extends React.Component {
     }
 
     render () {
+        let buttons = [
+            { value: 'spring', active: true },
+            { value: 'foam' },
+            { value: 'medical' },
+            { value: 'children\'s' },
+            { value: 'toppers' },
+            { value: 'frames' }
+        ];
+
         return (
             <div className="products">
                 <div className="products-title">What are you looking for?</div>
-                <div className="products-filter">
-                    <button className="products-filter__btn">spring</button>
-                    <button className="products-filter__btn">foam</button>
-                    <button className="products-filter__btn">medical</button>
-                    <button className="products-filter__btn">children's</button>
-                    <button className="products-filter__btn">toppers</button>
-                    <button className="products-filter__btn">frames</button>
-                </div>
+                    <Filter buttons={ buttons } />
                 <div className="products-container">{this.state.products}</div>
             </div>
         )

@@ -173,6 +173,7 @@ ul {
     cursor: pointer;
 }
 
+.btn--active,
 .products-filter__btn:hover {
     color: #E5E5FF;
     background-color: #09B7BE;

@@ -15,46 +15,74 @@ import {
 
 class NavBar extends React.Component {
 
-    render() {
-        return (
-                <Router>
-                    <div>
-                        <div className="navbar">
-                            <h1><Link to="/">Sleep Tight</Link></h1>
-                            <ul>
-                                <li><Link to="/products">PRODUCTS</Link></li>
-                                <li><Link to="/find-your-fit">FIND YOUR FIT</Link></li>
-                                <li><Link to="/about-us">ABOUT US</Link></li>
-                                <li><Link to="/contact">CONTACT</Link></li>
-                            </ul>   
-                           <span className="basketIcon"><Link to="/basket">Koszyk</Link></span>
-                       </div>
-
-                        <Switch>
-                        <Route exact path="/">
-                            <MainPage />
-                        </Route>
-                        <Route path="/products">
-                            <Products />
-                        </Route>
-                        <Route path="/find-your-fit">
-                            <FindFit />
-                        </Route>
-                        <Route path="/about-us">
-                            <About />
-                        </Route>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                        <Route path="/basket">
-                            <Basket />
-                        </Route>
-                        </Switch>
-                    </div>
-                    </Router>    
-           )
+    constructor(props) {
+        super(props);
+        this.state = {clicked_index: 0};
+        this.clickHandler = this.clickHandler.bind(this);
     }
-    
+
+    clickHandler(selectedIndex){
+        this.setState({clicked_index: selectedIndex});
+        this.props.links.forEach( (link, index) => {
+            if (index === selectedIndex) {
+                link.active = true;
+            } else {
+                link.active = false;
+            }
+        });
+    }
+
+    render() {
+        let linksGroup = this.props.links.map((link, index) => {
+            let linkBuilder = link.active ? (
+                <Link to={ link.path } className="navbar-menu__link link_active" onClick={()=>this.clickHandler(index)}>{ link.value }</Link>
+            ) : (
+                <Link to={ link.path } className="navbar-menu__link" onClick={()=>this.clickHandler(index)}>{ link.value }</Link>
+            );
+
+            return (
+                <li key={index}>
+                    { linkBuilder }
+                </li>
+            );
+        });
+
+        return (
+            <Router>
+                <div>
+                    <div className="navbar">
+                        <h1><Link to="/" className="navbar-title">Sleep Tight</Link></h1>
+                        <ul className="navbar-menu">
+                            { linksGroup }
+                        </ul>
+                       <span className="basketIcon"><Link to="/basket">Koszyk</Link></span>
+                   </div>
+
+                    <Switch>
+                    <Route exact path="/">
+                        <MainPage />
+                    </Route>
+                    <Route path="/products">
+                        <Products />
+                    </Route>
+                    <Route path="/find-your-fit">
+                        <FindFit />
+                    </Route>
+                    <Route path="/about-us">
+                        <About />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
+                    </Route>
+                    <Route path="/basket">
+                        <Basket />
+                    </Route>
+                    </Switch>
+                </div>
+            </Router>
+        )
+    }
+
 };
 
 export default NavBar;

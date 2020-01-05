@@ -22,7 +22,7 @@ class Filter extends React.Component {
     render() {
         let buttonsGroup = this.props.buttons.map((button, index) => {
             let buttonBuilder = button.active ? (
-                <button key={index} className="products-filter__btn btn--active" onClick={()=>this.clickHandler(index)}>{ button.value }</button>
+                <button key={index} className="products-filter__btn btn_active" onClick={()=>this.clickHandler(index)}>{ button.value }</button>
             ) : (
                 <button key={index} className="products-filter__btn" onClick={()=>this.clickHandler(index)}>{ button.value }</button>
             );

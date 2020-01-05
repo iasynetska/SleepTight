@@ -32,7 +32,7 @@ class Products extends React.Component {
 
     render () {
         let buttons = [
-            { value: 'spring', active: true },
+            { value: 'spring' },
             { value: 'foam' },
             { value: 'medical' },
             { value: 'children\'s' },

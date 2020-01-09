@@ -9,25 +9,14 @@ class Filter extends React.Component {
     }
 
     clickHandler(selectedIndex){
-        this.setState({clicked_index: selectedIndex});
-        this.props.buttons.forEach( (button, index) => {
-            if (index === selectedIndex) {
-                button.active = true;
-            } else {
-                button.active = false;
-            }
-        });
+        this.props.clickedButton.index = selectedIndex;
+        this.props.selectMattress(this.props.buttons[this.props.clickedButton.index].category);
     }
 
     render() {
         let buttonsGroup = this.props.buttons.map((button, index) => {
-            let buttonBuilder = button.active ? (
-                <button key={index} className="products-filter__btn btn_active" onClick={()=>this.clickHandler(index)}>{ button.value }</button>
-            ) : (
-                <button key={index} className="products-filter__btn" onClick={()=>this.clickHandler(index)}>{ button.value }</button>
-            );
-
-            return buttonBuilder;
+            const classes = index === this.props.clickedButton.index ? "products-filter__btn btn_active" : "products-filter__btn";
+            return <button key={index} className={classes} onClick={()=>this.clickHandler(index)}>{ button.value }</button>;
         });
 
         return (
@@ -36,6 +25,6 @@ class Filter extends React.Component {
             </div>
         );
     }
-};
+}
 
 export default Filter;

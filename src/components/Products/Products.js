@@ -1,49 +1,51 @@
 import React from 'react';
 import Product from './Product';
 import Filter from './Filter';
-import axios from 'axios';
+
+import { getMattress } from '../../services/mattressService';
 
 class Products extends React.Component {
-    state = { products: [] }
+    clickedButton = {index: -1};
+
+    constructor(props) {
+        super(props);
+        this.state = { products: [] };
+        this.selectMattress = this.selectMattress.bind(this);
+    }
 
     componentDidMount() {
-        // const productsData = await axios.get('http://...');
-        const productsData = [
-            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
-            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
-            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
-            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
-            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
-            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" },
-            { name: "hilding salsa", price: 1119, imgUrl: "../../../mat.png", review: 4, category: "thermoelastic foam" }
-        ]
+        this.selectMattress();
+    }
 
-        this.setState({products: productsData.map((product, index) => {
-            return <Product 
-                name={product.name}
-                price={product.price}
-                imgUrl={product.imgUrl}
-                review={product.review}
-                category={product.category}
-                key={index} 
-            />
-        })})
+    selectMattress(category) {
+        getMattress(category).then(res => this.setState({
+            products: res.map((product, index) => {
+                return <Product
+                    name={product.name}
+                    price={product.price}
+                    img={product.image}
+                    rating={product.rating}
+                    category={product.category}
+                    key={index}
+                />
+            })
+        }))
     }
 
     render () {
         let buttons = [
-            { value:'Spring' },
-            { value:'Foam' },
-            { value:'Medical' },
-            { value:'Children\'s' },
-            { value:'Toppers' },
-            { value:'Frames' }
+            { value:'Spring', category: 'spring' },
+            { value:'Foam', category: 'foam' },
+            { value:'Medical', category: 'medical' },
+            { value:'Children\'s', category: 'children\'s' },
+            { value:'Toppers', category: 'toppers' },
+            { value:'Frames', category: 'frames' }
         ];
 
         return (
             <div className="products">
                 <div className="products-title">What are you looking for?</div>
-                    <Filter buttons={ buttons } />
+                    <Filter clickedButton={ this.clickedButton } buttons={ buttons } selectMattress={this.selectMattress} />
                 <div className="products-container">{this.state.products}</div>
             </div>
         )

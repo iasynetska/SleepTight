@@ -12,13 +12,28 @@ class App extends React.Component {
             { value:'Contact', path:'/contact' }
         ];
 
+        let footerProductsLinks = [
+            { value:'Category A', path:'#' },
+            { value:'Category B', path:'#' },
+            { value:'Category C', path:'#' },
+            { value:'Category D', path:'#' }
+        ];
+
+        let footerInformationLinks = [
+            { value:'Terms of use', path:'#' },
+            { value:'Privacy & Policies', path:'#' },
+            { value:'Cookies information', path:'#' },
+            { value:'Delivery', path:'#' },
+            { value:'FAQ', path:'#' }
+        ];
+
         return (
             <React.Fragment>
                 <NavBar links={ links } />
-                <Footer />
+                <Footer productsLinks={ footerProductsLinks } informationLinks={ footerInformationLinks } />
             </React.Fragment>
         )
     }
-};
+}
 
 export default App;

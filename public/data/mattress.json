@@ -1,0 +1,114 @@
+[
+  {
+    "name": "hilding rumba",
+    "price": "835,20",
+    "image": "/mat.png",
+    "rating": 3,
+    "category": "spring"
+  },
+  {
+    "name": "hilding makarena",
+    "price": "567,50",
+    "image": "/mat.png",
+    "rating": 1,
+    "category": "spring"
+  },
+  {
+    "name": "hilding tango",
+    "price": "950,00",
+    "image": "/mat.png",
+    "rating": 5,
+    "category": "frames"
+  },
+  {
+    "name": "hilding flamenco",
+    "price": "444,80",
+    "image": "/mat.png",
+    "rating": 4,
+    "category": "frames"
+  },
+  {
+    "name": "janpol gemini",
+    "price": "980,00",
+    "image": "/mat.png",
+    "rating": 0,
+    "category": "foam"
+  },
+  {
+    "name": "janpol rosalia",
+    "price": "535,20",
+    "image": "/mat.png",
+    "rating": 0,
+    "category": "foam"
+  },
+  {
+    "name": "janpol roma",
+    "price": "640,80",
+    "image": "/mat.png",
+    "rating": 4,
+    "category": "toppers"
+  },
+  {
+    "name": "janpol fides",
+    "price": "750,00",
+    "image": "/mat.png",
+    "rating": 5,
+    "category": "toppers"
+  },
+  {
+    "name": "janpol fides",
+    "price": "750,00",
+    "image": "/mat.png",
+    "rating": 5,
+    "category": "toppers"
+  },
+  {
+    "name": "sembella elasto",
+    "price": "375,20",
+    "image": "/mat.png",
+    "rating": 1,
+    "category": "medical"
+  },
+  {
+    "name": "sembella dream",
+    "price": "600,00",
+    "image": "/mat.png",
+    "rating": 4,
+    "category": "medical"
+  },
+  {
+    "name": "sembella dream",
+    "price": "600,00",
+    "image": "/mat.png",
+    "rating": 4,
+    "category": "medical"
+  },
+  {
+    "name": "sembella dream",
+    "price": "600,00",
+    "image": "/mat.png",
+    "rating": 4,
+    "category": "medical"
+  },
+  {
+    "name": "sembella dream",
+    "price": "600,00",
+    "image": "/mat.png",
+    "rating": 4,
+    "category": "medical"
+  },
+  {
+    "name": "sembella dream",
+    "price": "600,00",
+    "image": "/mat.png",
+    "rating": 4,
+    "category": "medical"
+  },
+  {
+    "name": "sembella cupido",
+    "price": "777,77",
+    "image": "/mat.png",
+    "rating": 3,
+    "category": "children's"
+  }
+]

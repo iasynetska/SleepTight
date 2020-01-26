@@ -2,7 +2,7 @@
 
 Online shop selling mattresses. The project made in React
 
-<img src="https://github.com/iasynetska/SleepTight/blob/master/src/img/mainPage.jpg" width="600">
+<img src="https://github.com/iasynetska/SleepTight/blob/master/src/img/mainPage.png" width="600">
 
 ## Getting Started
 

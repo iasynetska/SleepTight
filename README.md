@@ -1,6 +1,8 @@
 # SleepTight
 
-Mattress online store
+Online shop selling mattresses. The project made in React
+
+<img src="https://github.com/iasynetska/SleepTight/blob/master/src/img/mainPage.jpg" width="600">
 
 ## Getting Started
 
